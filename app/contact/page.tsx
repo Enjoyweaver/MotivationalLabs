@@ -9,19 +9,19 @@ const socials = [
     icon: <Twitter size={20} />,
     href: "https://twitter.com/motivationaLabs",
     label: "Twitter",
-    handle: "@motivationaLabs",
+    handle: "@MotivationaLabs",
   },
   {
     icon: <Mail size={20} />,
     href: "mailto:collaboratingonfantom@gmail.com",
     label: "Email",
-    handle: "collaboratingonfantom@gmail.com",
+    handle: "Motivational Labs",
   },
   {
     icon: <Github size={20} />,
     href: "https://github.com/enjoyweaver/MotivationalLabs",
     label: "Github",
-    handle: "EnjoyWeaver",
+    handle: "Motivational Labs",
   },
 ];
 
