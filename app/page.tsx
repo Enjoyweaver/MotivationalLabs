@@ -35,7 +35,15 @@ export default function Home() {
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
       <div className="my-16 text-center animate-fade-in">
         <h2 className="text-sm text-zinc-500 ">
-          Creating 3D art on Fantom using{" "}
+          Creating 3D art on{" "}
+          <Link
+            target="_blank"
+            href="https://fantom.foundation"
+            className="underline duration-500 hover:text-zinc-300"
+          >
+            Fantom
+          </Link>{" "}
+          using{" "}
           <Link
             target="_blank"
             href="https://blender.org"
