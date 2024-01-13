@@ -41,9 +41,9 @@ export default function Home() {
             href="https://blender.org"
             className="underline duration-500 hover:text-zinc-300"
           >
-            Blender.org
+            Blender.org,
           </Link>{" "}
-          , a free and open-source 3D animation tool.
+          a free and open-source 3D animation tool.
         </h2>
       </div>
     </div>
