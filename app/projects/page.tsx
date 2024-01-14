@@ -6,7 +6,6 @@ import { Card } from "../components/card";
 import { Article } from "./article";
 import { Redis } from "@upstash/redis";
 import { Eye } from "lucide-react";
-import Image from "next/image";
 
 const redis = Redis.fromEnv();
 
@@ -110,22 +109,9 @@ export default async function ProjectsPage() {
             {sorted
               .filter((_, i) => i % 3 === 0)
               .map((project) => (
-                <div
-                  key={project.slug}
-                  className="relative w-full h-full p-4 md:p-8"
-                >
-                  <Link href={`/projects/${project.slug}`}>
-                    <a>
-                      <Image
-                        src={`/art/motivationallogo.png`} // Adjust the path accordingly
-                        alt={project.title}
-                        width={400} // Set the width of the image
-                        height={300} // Set the height of the image
-                        className="rounded-md"
-                      />
-                    </a>
-                  </Link>
-                </div>
+                <Card key={project.slug}>
+                  <Article project={project} views={views[project.slug] ?? 0} />
+                </Card>
               ))}
           </div>
           <div className="grid grid-cols-1 gap-4">
