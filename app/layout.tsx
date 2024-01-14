@@ -12,12 +12,12 @@ export const metadata: Metadata = {
   description: "Creating 3D art on Fantom using Blender.org",
   openGraph: {
     title: "Motivational Labs",
-    description: "Co-founder of unkey.dev and founder of planetfall.io",
-    url: "https://chronark.com",
+    description: "Creating 3D art on Fantom using Blender.org",
+    url: "https://motivationallabs.vercel.app/",
     siteName: "Motivational Labs",
     images: [
       {
-        url: "https://chronark.com/og.png",
+        url: "https://pbs.twimg.com/profile_images/1746368570437640192/Cij6Ieia_400x400.jpg",
         width: 1920,
         height: 1080,
       },
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   icons: {
-    shortcut: "/favicon.png",
+    shortcut: "/motivationallogo.png",
   },
 };
 const inter = Inter({
