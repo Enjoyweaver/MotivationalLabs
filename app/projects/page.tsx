@@ -6,6 +6,7 @@ import { Card } from "../components/card";
 import { Article } from "./article";
 import { Redis } from "@upstash/redis";
 import { Eye } from "lucide-react";
+import Image from "next/image";
 
 const redis = Redis.fromEnv();
 
@@ -46,8 +47,8 @@ export default async function ProjectsPage() {
             Our 3D Art
           </h2>
           <p className="mt-4 text-zinc-400">
-            The projects we have completed along and over time we will include
-            tutorials for some of them.
+            The work we have completed along with information about the project
+            it was for.
           </p>
         </div>
         <div className="w-full h-px bg-zinc-800" />
@@ -109,9 +110,22 @@ export default async function ProjectsPage() {
             {sorted
               .filter((_, i) => i % 3 === 0)
               .map((project) => (
-                <Card key={project.slug}>
-                  <Article project={project} views={views[project.slug] ?? 0} />
-                </Card>
+                <div
+                  key={project.slug}
+                  className="relative w-full h-full p-4 md:p-8"
+                >
+                  <Link href={`/projects/${project.slug}`}>
+                    <a>
+                      <Image
+                        src={`/art/motivationallogo.png`} // Adjust the path accordingly
+                        alt={project.title}
+                        width={400} // Set the width of the image
+                        height={300} // Set the height of the image
+                        className="rounded-md"
+                      />
+                    </a>
+                  </Link>
+                </div>
               ))}
           </div>
           <div className="grid grid-cols-1 gap-4">
